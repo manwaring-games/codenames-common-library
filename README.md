@@ -4,6 +4,8 @@
 </p>
 
 <p align="center">
+<a href="https://www.npmjs.com/package/@manwaring-games/codenames-common">
+    <img src="https://img.shields.io/npm/v/@manwaring-games/codenames-common/latest?style=flat-square&latest"></a>
   <a href="https://circleci.com/gh/manwaring-games/codenames-common-library">
     <img src="https://img.shields.io/circleci/build/github/manwaring-games/codenames-common-library?style=flat-square&token=39939fde42f2991bf714b41ba5976f2770b801e6&logo=circleci"></a>
   <a href="https://app.dependabot.com/accounts/manwaring-games/repos/261629125">
