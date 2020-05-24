@@ -12,8 +12,11 @@ jobs:
       - checkout
       - node/install-packages
       - run:
+          name: Configure npm for publishing
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_PUBLISH_TOKEN" > ~/.npmrc
+      - run:
           name: Publish on npm
-          command: git status && npm run publish-please
+          command: npm run publish-please
 
 workflows:
   version: 2
@@ -28,7 +31,7 @@ workflows:
 
       # main tag
       - publish:
-          context: codenames-ci
+          context: games-ci
           requires: [node/test]
           filters:
             branches:
