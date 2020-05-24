@@ -21,14 +21,13 @@ workflows:
       # all
       - node/test:
           version: 'lts'
-          context: coaches-ci
           filters:
             tags:
               only: /.*/
 
       # main tag
       - publish:
-          context: coaches-ci
+          context: codenames-ci
           requires: [node/test]
           filters:
             branches:
