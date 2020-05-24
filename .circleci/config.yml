@@ -13,7 +13,7 @@ jobs:
       - node/install-packages
       - run:
           name: Publish on npm
-          command: npm run publish-please
+          command: git status && npm run publish-please
 
 workflows:
   version: 2
