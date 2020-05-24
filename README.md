@@ -1,16 +1,16 @@
 <p align="center">
-  <img height="150" src="https://d1wzvcwrgjaybe.cloudfront.net/repos/games/library-starter/readme-category-icon.png">
-  <img height="150" src="https://d1wzvcwrgjaybe.cloudfront.net/repos/games/library-starter/readme-repo-icon.png">
+  <img height="150" src="https://d1wzvcwrgjaybe.cloudfront.net/repos/games/codenames-common-library/readme-category-icon.png">
+  <img height="150" src="https://d1wzvcwrgjaybe.cloudfront.net/repos/games/codenames-common-library/readme-repo-icon.png">
 </p>
 
 <p align="center">
-  <a href="https://circleci.com/gh/games/library-starter">
-    <img src="https://img.shields.io/circleci/build/github/games/library-starter?style=flat-square&token=b92c781a53b9dbf87550189b8a2559971e72bfc2&logo=circleci"></a>
-  <a href="https://app.dependabot.com/accounts/games/repos/261629125">
+  <a href="https://circleci.com/gh/manwaring-games/codenames-common-library">
+    <img src="https://img.shields.io/circleci/build/github/manwaring-games/codenames-common-library?style=flat-square&token=b92c781a53b9dbf87550189b8a2559971e72bfc2&logo=circleci"></a>
+  <a href="https://app.dependabot.com/accounts/manwaring-games/repos/261629125">
     <img src="https://img.shields.io/static/v1?label=dependabot&message=enabled&color=blue&logo=dependabot&style=flat-square"></a>
 </p>
 
-# Library starter
+# Codenames common library
 
 This repository contains stuff.
 
@@ -20,4 +20,4 @@ This repository contains stuff.
 
 ## Install
 
-`npm i -S @games/library-starter`
+`npm i -S @manwaring-games/codenames-common`
