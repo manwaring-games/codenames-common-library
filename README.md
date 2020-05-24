@@ -12,12 +12,24 @@
 
 # Codenames common library
 
-This repository contains stuff.
+This repository contains TypeScript interfaces for the Codenames application, for use by both frontend and backend projects.
 
-## Publish
-
-`npm run publish-please`
-
-## Install
+# Install
 
 `npm i -S @manwaring-games/codenames-common`
+
+# Local development
+
+## Local setup prerequisites
+
+1. **[CircleCI CLI](https://circleci.com/docs/2.0/local-cli/#installation)**: This project uses CircleCI for CI and publishing, and contains a Git hook (managed by [husky](https://www.npmjs.com/package/husky)) to validate the CircleCI config before committing. For you to commit changes you'll need to install the CLI.
+1. **[Nodejs](https://nodejs.org/en/download/)**: I recommend using [nvm](https://github.com/nvm-sh/nvm) or something similar to manage Node versions locally. This project is developed and tested on the `lts` version, which as of inital package publishing is `12.16.3`.
+
+## Steps to publish
+
+1. Commit changes locally
+1. Update package version (using [semantic versioning](https://semver.org/)) with the `npm version <version>` command and commit the updated `package.json` and `package-lock.json` files
+1. Push all changes to GitHub
+1. \*Create a new release in GitHub matching the new package version, prefixed with a `v` e.g. `v0.0.1`
+
+\*Note that commiting to the main branch will trigger CI checks in CircleCI but won't initiate package publishing - only the creation of a new release in GitHub will initiate the CircleCI workflow to publish a new package.
