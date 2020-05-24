@@ -10,6 +10,7 @@ jobs:
       tag: 'lts'
     steps:
       - checkout
+      - node/install-packages
       - run:
           name: Publish on npm
           command: npm run publish-please
