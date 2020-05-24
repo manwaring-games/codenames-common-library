@@ -1,0 +1,37 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@2.1.0
+
+jobs:
+  publish:
+    executor:
+      name: node/default
+      tag: 'lts'
+    steps:
+      - checkout
+      - run:
+          name: Publish on npm
+          command: npm run publish-please
+
+workflows:
+  version: 2
+  test-and-publish:
+    jobs:
+      # all
+      - node/test:
+          version: 'lts'
+          context: coaches-ci
+          filters:
+            tags:
+              only: /.*/
+
+      # main tag
+      - publish:
+          context: coaches-ci
+          requires: [node/test]
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /v.*/

@@ -1,0 +1,40 @@
+{
+  "name": "@manwaring-games/library-starter",
+  "version": "0.0.1",
+  "description": "Template repository for custom libraries",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "test": "echo \"Error: no test specified\"",
+    "test-circle": "circleci config validate",
+    "publish-please": "publish-please",
+    "prepublishOnly": "publish-please guard && npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.5",
+    "husky": "^4.2.5",
+    "publish-please": "^5.5.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.9.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test && npm run test-circle"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "author": "Made with ♥ by Andrew and Phillip Manwaring"
+}
