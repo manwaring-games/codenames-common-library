@@ -28,6 +28,6 @@ import { Clue } from './clue';
 export interface Turn {
   id: string;
   team: Team;
-  clue: Clue;
+  clue?: Clue;
   guesses?: Guess[];
 }

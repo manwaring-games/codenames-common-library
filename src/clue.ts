@@ -30,6 +30,7 @@
  *            type: number
  */
 export interface Clue {
+  id: string;
   word: string;
   tiles: number;
 }
