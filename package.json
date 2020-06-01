@@ -1,6 +1,6 @@
 {
   "name": "@manwaring-games/codenames-common",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Common interfaces for UI and API/services",
   "publishConfig": {
     "access": "public"
@@ -14,7 +14,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^14.0.5",
+    "@types/node": "^14.0.6",
     "husky": "^4.2.5",
     "publish-please": "^5.5.1",
     "rimraf": "^3.0.2",

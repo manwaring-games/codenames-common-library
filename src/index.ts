@@ -1,3 +1,4 @@
+export * from './clue';
 export * from './game';
 export * from './person';
 export * from './team';
