@@ -7,10 +7,6 @@ import { Clue } from './clue';
  *  components:
  *    schemas:
  *
- *      CreateTurnRequest:
- *        type: object
- *        properties:
- *
  *      Turn:
  *        type: object
  *        properties:
