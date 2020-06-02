@@ -46,7 +46,7 @@ export interface Turn {
  *        properties:
  *          active:
  *            description: Information about the active turn
- *            $ref: '#/components/schemas/Turn
+ *            $ref: '#/components/schemas/Turn'
  *          past:
  *            description: Information about past turns
  *            type: array
