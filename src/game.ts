@@ -44,6 +44,8 @@ export interface Game {
   started: boolean;
   tiles?: Tile[];
   people?: Person[];
-  activeTurn?: Turn;
-  pastTurns?: Turn[];
+  turns?: {
+    active?: Turn;
+    past?: Turn[];
+  };
 }
