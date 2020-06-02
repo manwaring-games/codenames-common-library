@@ -29,14 +29,21 @@ import { Turn } from './turn';
  *            type: array
  *            items:
  *              $ref: '#/components/schemas/Person'
- *          activeTurn:
+ *          turns:
+ *            description: Active and past turns
+ *            $ref: '#/components/schemas/Turns'
+ *
+ *      Turns:
+ *        type: object
+ *        properties:
+ *          active:
  *            description: Information about the active turn
  *            $ref: '#/components/schemas/Turn
- *          pastTurns:
+ *          past:
  *            description: Information about past turns
  *            type: array
  *            items:
- *              $ref: '#/componenets/schemas/Turn'
+ *              $ref: '#/components/schemas/Turn'
  */
 export interface Game {
   id: string;
