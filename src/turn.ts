@@ -13,6 +13,9 @@ import { Clue } from './clue';
  *          id:
  *            description: Unique guid to identify the turn
  *            type: string
+ *          turn:
+ *            description: Whether or not this is the active turn
+ *            type: boolean
  *          team:
  *            description: The active team this turn
  *            $ref: '#/components/schemas/Team'
@@ -27,6 +30,7 @@ import { Clue } from './clue';
  */
 export interface Turn {
   id: string;
+  active: boolean;
   team: Team;
   clue?: Clue;
   guesses?: Guess[];
