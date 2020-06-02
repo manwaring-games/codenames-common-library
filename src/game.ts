@@ -32,6 +32,20 @@ import { Turn } from './turn';
  *          turns:
  *            description: Active and past turns
  *            $ref: '#/components/schemas/Turns'
+ */
+export interface Game {
+  id: string;
+  code: string;
+  started: boolean;
+  tiles?: Tile[];
+  people?: Person[];
+  turns?: Turns;
+}
+
+/**
+ *  @swagger
+ *  components:
+ *    schemas:
  *
  *      Turns:
  *        type: object
@@ -45,14 +59,7 @@ import { Turn } from './turn';
  *            items:
  *              $ref: '#/components/schemas/Turn'
  */
-export interface Game {
-  id: string;
-  code: string;
-  started: boolean;
-  tiles?: Tile[];
-  people?: Person[];
-  turns?: {
-    active?: Turn;
-    past?: Turn[];
-  };
+export interface Turns {
+  active?: Turn;
+  past?: Turn[];
 }
