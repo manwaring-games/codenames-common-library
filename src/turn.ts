@@ -7,6 +7,10 @@ import { Clue } from './clue';
  *  components:
  *    schemas:
  *
+ *      CreateTurnRequest:
+ *        type: object
+ *        properties:
+ *
  *      Turn:
  *        type: object
  *        properties:
@@ -34,4 +38,26 @@ export interface Turn {
   team: Team;
   clue?: Clue;
   guesses?: Guess[];
+}
+
+/**
+ *  @swagger
+ *  components:
+ *    schemas:
+ *
+ *      Turns:
+ *        type: object
+ *        properties:
+ *          active:
+ *            description: Information about the active turn
+ *            $ref: '#/components/schemas/Turn
+ *          past:
+ *            description: Information about past turns
+ *            type: array
+ *            items:
+ *              $ref: '#/components/schemas/Turn'
+ */
+export interface Turns {
+  active?: Turn;
+  past?: Turn[];
 }

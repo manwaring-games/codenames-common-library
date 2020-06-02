@@ -1,6 +1,7 @@
 import { Person } from './person';
 import { Tile } from './tile';
-import { Turn } from './turn';
+import { Turns } from './turn';
+import { Team } from './team';
 
 /**
  *  @swagger
@@ -19,6 +20,9 @@ import { Turn } from './turn';
  *          started:
  *            description: Indicates whether the game has started or not
  *            type: boolean
+ *          startTeam:
+ *            description: Indicates which team started the game
+ *            $ref: '#/components/schemas/Team'
  *          tiles:
  *            description: The tiles that players will provide clues and guesses for
  *            type: array
@@ -37,29 +41,8 @@ export interface Game {
   id: string;
   code: string;
   started: boolean;
+  startTeam: Team;
   tiles?: Tile[];
   people?: Person[];
   turns?: Turns;
-}
-
-/**
- *  @swagger
- *  components:
- *    schemas:
- *
- *      Turns:
- *        type: object
- *        properties:
- *          active:
- *            description: Information about the active turn
- *            $ref: '#/components/schemas/Turn
- *          past:
- *            description: Information about past turns
- *            type: array
- *            items:
- *              $ref: '#/components/schemas/Turn'
- */
-export interface Turns {
-  active?: Turn;
-  past?: Turn[];
 }
